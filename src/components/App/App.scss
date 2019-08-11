@@ -1,0 +1,97 @@
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// toolbar style
+#app .v-toolbar__extension {
+  padding: 0;
+}
+
+// input style
+#app .v-text-field {
+  > .v-input__control > .v-input__slot {
+    min-height: 50px;
+  }
+
+  .v-input__prepend-inner {
+    margin-top: 12px;
+    padding-right: 10px;
+  }
+
+  .v-input__append-inner {
+    margin-top: 12px;
+  }
+
+  .v-select__slot > input {
+    margin-top: 20px;
+  }
+
+  .v-label {
+    top: 13px;
+  }
+
+  input {
+    padding: 0 0 6px;
+  }
+}
+
+// list style
+#app .v-list {
+  padding: 0;
+}
+
+// list style for autocomplete
+#app .v-autocomplete__content .v-list {
+  .v-list__tile {
+    height: auto;
+    padding: 8px 12px 0;
+  }
+
+  .v-list__tile__title {
+    height: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  .v-list__tile__mask {
+    background: none;
+    color: red;
+  }
+}
+
+// list group style
+#app .v-list__group:before,
+#app .v-list__group:after {
+  display: none;
+}
+
+#app .v-list__group__header {
+  padding-right: 4px;
+
+  @media screen and (min-width: 960px) {
+    padding-right: 8px;
+  }
+}
+
+// button style
+#app .v-btn:before {
+  content: none;
+}
+
+#app .v-btn--depressed {
+  border-radius: 5px;
+}
+
+#app .v-btn--outline {
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+// breadcrumbs style
+#app .v-breadcrumbs li {
+  line-height: 14px;
+}
+
+#app .v-breadcrumbs li:nth-child(even) {
+  padding: 0 6px;
+}
