@@ -10,6 +10,7 @@ import Vuetify, {
   VCardTitle,
   VContainer,
   VContent,
+  VCol,
   VDatePicker,
   VDivider,
   VFlex,

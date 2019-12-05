@@ -16,6 +16,12 @@ const PostsView = () => import(/* webpackChunkName: "postsView" */
   '@/views/PostsView/PostsView.vue');
 const PostView = () => import(/* webpackChunkName: "postsView" */
   '@/views/PostView/PostView.vue');
+const ProfileView = () => import(/* webpackChunkName: "profileView" */
+  '@/views/ProfileView/ProfileView.vue');
+const CreatePostView = () => import(/* webpackChunkName: "createPostView" */
+  '@/views/CreatePostView/CreatePostView.vue');
+const EditPostView = () => import(/* webpackChunkName: "editPostView" */
+  '@/views/EditPostView/EditPostView.vue');
 
 
 export default new Router({
@@ -52,6 +58,21 @@ export default new Router({
           path: 'posts/:id',
           name: 'post',
           component: PostView,
+        },
+        {
+          path: 'profile',
+          name: 'profile',
+          component: ProfileView,
+        },
+        {
+          path: 'post/create',
+          name: 'create-post',
+          component: CreatePostView,
+        },
+        {
+          path: 'post/edit',
+          name: 'edit-post',
+          component: EditPostView,
         },
       ],
     },
