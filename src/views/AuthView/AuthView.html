@@ -1,0 +1,97 @@
+<div>
+  <v-container fluid grid-list-xl pt-3>
+    <v-row
+      align="center"
+      justify="center"
+    >
+      <v-col
+        cols="12"
+        sm="8"
+        md="4"
+      >
+        <v-card outlined>
+          <v-tabs
+            background-color="darken-3"
+            class="pd-2"
+          >
+            <v-tab>
+              Connexion
+            </v-tab>
+            <v-tab>
+              Inscription
+            </v-tab>
+            <v-tab-item>
+              <v-card-text>
+                <v-text-field
+                  label="Adresse mail"
+                  name="login"
+                  prepend-icon="person"
+                  type="text"
+                />
+                <v-text-field
+                  id="password"
+                  label="Mot de passe"
+                  name="password"
+                  prepend-icon="lock"
+                  type="password"
+                />
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer />
+                <v-btn color="primary">Connexion</v-btn>
+              </v-card-actions>
+            </v-tab-item>
+
+            <v-tab-item>
+              <v-card-text>
+                <v-text-field
+                  label="Adresse mail"
+                  name="login"
+                  prepend-icon="person"
+                  type="text"
+                />
+
+                <v-text-field
+                  label="Pseudo"
+                  name="login"
+                  prepend-icon="account-badge"
+                  type="text"
+                />
+
+                <v-text-field
+                  id="password"
+                  label="Mot de passe"
+                  name="password"
+                  prepend-icon="lock"
+                  type="password"
+                />
+
+                <v-checkbox
+                  id="university"
+                  label="Je représente un service universitaire"
+                  name="university"
+                  color="primary"
+                  v-model="university"
+                >
+                </v-checkbox>
+
+                <v-text-field
+                  v-if="university"
+                  id="rss"
+                  label="Flux RSS de communication"
+                  name="rss"
+                  prepend-icon="rss"
+                  type="password"
+                />
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer />
+                <v-btn color="primary">Inscription</v-btn>
+              </v-card-actions>
+            </v-tab-item>
+          </v-tabs>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</div>

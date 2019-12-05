@@ -1,10 +1,29 @@
 <v-footer
-  color="primary darken-1"
-  height="auto"
-  dark
+  padless
 >
-  <v-container fluid>
-    <v-layout justify-center align-center>
-    </v-layout>
-  </v-container>
+  <v-card
+    flat
+    tile
+    width="100%"
+    class="black lighten-2 text-center"
+  >
+    <v-card-text>
+
+      <v-btn
+        href="https://github.com/La-Nouvelle-Epoch-18/vue-front"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <v-icon>github-circle</v-icon>
+        Source
+      </v-btn>
+
+    </v-card-text>
+
+    <v-divider></v-divider>
+
+    <v-card-text class="white--text">
+      © {{ new Date().getFullYear() }} - Amine Hilaly | Kévin Baumeyer | Robin Biechy | Yohann Jolain | Sébastien Erfani 
+    </v-card-text>
+  </v-card>
 </v-footer>

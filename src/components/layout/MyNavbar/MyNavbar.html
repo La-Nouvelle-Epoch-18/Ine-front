@@ -1,0 +1,37 @@
+<div>
+  <v-toolbar
+    dark
+    color="black lighten-2"
+  >
+      <v-toolbar-title>
+        Title
+      </v-toolbar-title>
+
+    <v-spacer></v-spacer>
+
+    <v-toolbar-items>
+      <v-btn 
+        text
+        href="/"
+      >
+        Accueil
+      </v-btn>
+      <v-btn
+        text
+        href="/Posts"
+      >
+        Offres
+      </v-btn>
+    </v-toolbar-items>
+
+    <v-tooltip bottom>
+      <template v-slot:activator="{ on }">
+        <v-btn icon v-on="on">
+          <v-icon>mdi-person</v-icon>
+        </v-btn>
+      </template>
+      <span>Mon compte</span>
+    </v-tooltip>
+
+  </v-toolbar>
+</div>

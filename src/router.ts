@@ -10,6 +10,8 @@ const MainWrapper = () => import(/* webpackChunkName: "mainWrapper" */
   '@/views/MainWrapper/MainWrapper.vue');
 const HomeView = () => import(/* webpackChunkName: "homeView" */
   '@/views/HomeView/HomeView.vue');
+const AuthView = () => import(/* webpackChunkName: "authView" */
+  '@/views/AuthView/AuthView.vue');
 
 export default new Router({
   mode: 'history',
@@ -30,6 +32,11 @@ export default new Router({
           path: '',
           name: 'home',
           component: HomeView,
+        },
+        {
+          path: 'auth',
+          name: 'auth',
+          component: AuthView,
         },
       ],
     },
