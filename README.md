@@ -1,4 +1,11 @@
-# MongolfièreManager
+<p align="center"><img width="100" src="https://avatars0.githubusercontent.com/u/58552280?s=200&v=4" alt="La Nouvelle Epoch"></p>
+
+<h1 align="center">Projet Nuit de l'INFO 2019</h1>
+
+<p align="center">
+<a href="">lien</a>
+</p>
+
 
 ## Project setup
 ```
