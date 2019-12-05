@@ -38,7 +38,6 @@ import Vuetify, {
   VToolbarItems,
   VTooltip,
   VRow,
-  VCol,
 } from 'vuetify/lib';
 import theme from '../vuetify/theme';
 import 'vuetify/dist/vuetify.min.css';

@@ -1,7 +1,7 @@
-import myAxios, { PromiseInterface, wrapper } from './Http';
+import { PromiseInterface, wrapper, postAxios } from './Http';
 import { Post } from '@/stores/posts/PostModel';
 
 export const getAll = ():
     Promise<PromiseInterface<Post[]>> => (
-        wrapper(myAxios.get('/posts'))
+        wrapper(postAxios.get('/posts'))
     );

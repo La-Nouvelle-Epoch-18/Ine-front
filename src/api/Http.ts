@@ -29,8 +29,8 @@ Promise<PromiseInterface<S>> => (
     .catch(({ data, status }: HttpError) => ({ success: null, error: data || {}, status }))
 );
 
-const myAxios = axios.create({
-  baseURL: process.env.VUE_APP_API,
+export const userAxios = axios.create({
+  baseURL: process.env.VUE_USER_API,
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
@@ -39,7 +39,27 @@ const myAxios = axios.create({
   },
 });
 
-myAxios.interceptors.response.use((response) => {
+export const rssAxios = axios.create({
+  baseURL: process.env.VUE_RSS_API,
+  headers: {
+    common: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin',
+    },
+  },
+});
+
+export const postAxios = axios.create({
+  baseURL: process.env.VUE_POST_API,
+  headers: {
+    common: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin',
+    },
+  },
+});
+
+rssAxios.interceptors.response.use((response) => {
   return response;
 }, (error) => {
   if (error.response.status === 401) {
@@ -49,7 +69,7 @@ myAxios.interceptors.response.use((response) => {
   return Promise.reject(error.response);
 });
 
-myAxios.interceptors.request.use((request) => {
+rssAxios.interceptors.request.use((request) => {
   const token = localStorage.getItem('token');
   if (token) {
     request.headers.authorization = `Bearer ${token}`;
@@ -59,4 +79,42 @@ myAxios.interceptors.request.use((request) => {
   return Promise.reject(error);
 });
 
-export default myAxios;
+postAxios.interceptors.response.use((response) => {
+  return response;
+}, (error) => {
+  if (error.response.status === 401) {
+    store.dispatch('users/logoutUser');
+    window.location.replace(`/`);
+  }
+  return Promise.reject(error.response);
+});
+
+postAxios.interceptors.request.use((request) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    request.headers.authorization = `Bearer ${token}`;
+  }
+  return request;
+}, (error) => {
+  return Promise.reject(error);
+});
+
+userAxios.interceptors.response.use((response) => {
+  return response;
+}, (error) => {
+  if (error.response.status === 401) {
+    store.dispatch('users/logoutUser');
+    window.location.replace(`/`);
+  }
+  return Promise.reject(error.response);
+});
+
+userAxios.interceptors.request.use((request) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    request.headers.authorization = `Bearer ${token}`;
+  }
+  return request;
+}, (error) => {
+  return Promise.reject(error);
+});
