@@ -12,6 +12,9 @@ const HomeView = () => import(/* webpackChunkName: "homeView" */
   '@/views/HomeView/HomeView.vue');
 const AuthView = () => import(/* webpackChunkName: "authView" */
   '@/views/AuthView/AuthView.vue');
+const PostsView = () => import(/* webpackChunkName: "postsView" */
+  '@/views/PostsView/PostsView.vue');
+
 
 export default new Router({
   mode: 'history',
@@ -38,10 +41,14 @@ export default new Router({
           name: 'auth',
           component: AuthView,
         },
+        {
+          path: 'posts',
+          name: 'posts',
+          component: PostsView,
+        },
       ],
     },
     {
-      // Redirect user its language or fr as a fallback
       path: '*',
       redirect() {
         return `/`;

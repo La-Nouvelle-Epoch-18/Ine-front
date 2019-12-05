@@ -1,0 +1,13 @@
+<v-list-item v-if="post">
+  <v-list-item-avatar>
+    <v-icon>favorite_border</v-icon>
+  </v-list-item-avatar>
+
+  <v-list-item-content>
+    <v-list-item-title>
+      {{ post.title }}
+    </v-list-item-title>
+
+    {{ post.content }}
+  </v-list-item-content>
+</v-list-item>
