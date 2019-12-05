@@ -36,6 +36,8 @@ import Vuetify, {
   VToolbarTitle,
   VToolbarItems,
   VTooltip,
+  VRow,
+  VCol,
 } from 'vuetify/lib';
 import theme from '../vuetify/theme';
 import 'vuetify/dist/vuetify.min.css';
@@ -45,6 +47,7 @@ export default new Vuetify({
   theme,
   components: {
     VApp,
+    VCol,
     VContent,
     VToolbar,
     VToolbarTitle,
@@ -73,5 +76,7 @@ export default new Vuetify({
     VForm,
     VSnackbar,
     VImg,
+    VToolbarItems,
+    VRow,
   },
 });

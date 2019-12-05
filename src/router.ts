@@ -14,6 +14,8 @@ const AuthView = () => import(/* webpackChunkName: "authView" */
   '@/views/AuthView/AuthView.vue');
 const PostsView = () => import(/* webpackChunkName: "postsView" */
   '@/views/PostsView/PostsView.vue');
+const PostView = () => import(/* webpackChunkName: "postsView" */
+  '@/views/PostView/PostView.vue');
 
 
 export default new Router({
@@ -45,6 +47,11 @@ export default new Router({
           path: 'posts',
           name: 'posts',
           component: PostsView,
+        },
+        {
+          path: 'posts/:id',
+          name: 'post',
+          component: PostView,
         },
       ],
     },

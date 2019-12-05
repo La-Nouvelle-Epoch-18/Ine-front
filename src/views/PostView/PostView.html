@@ -1,0 +1,30 @@
+<div>
+  <v-container fluid class="px-2 ma-4">
+    <v-row>
+      <v-col cols="12">
+        <v-card>
+          <v-card-title>
+            {{ post.title }}
+          </v-card-title>
+          <v-card-text>
+            {{ post.content }}
+          </v-card-text>
+
+          <v-card-actions>
+            <v-btn color="success"><v-icon left>thumb_up</v-icon>J'aime</v-btn>
+            <v-btn color="error"><v-icon left>thumb_down</v-icon>Je n'aime pas</v-btn>
+          </v-card-actions>
+        </v-card>
+        
+        <v-list>
+          <v-list-item v-for="comment in comments">
+            <v-list-item-content>
+              {{ comment.content }}
+            </v-list-item-content>
+            <v-divider></v-divider>
+          </v-list-item>
+        </v-list>
+      </v-col>      
+    </v-row>
+  </v-container>
+</div>
