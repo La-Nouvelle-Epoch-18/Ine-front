@@ -23,14 +23,14 @@ export interface PromiseInterface<S> {
 }
 
 export const wrapper = <S>(promise: Promise<any>):
-Promise<PromiseInterface<S>> => (
-  promise
-    .then(({ data, status }: HttpSuccess<S>) => ({ success: data, error: null, status }))
-    .catch(({ data, status }: HttpError) => ({ success: null, error: data || {}, status }))
-);
+  Promise<PromiseInterface<S>> => (
+    promise
+      .then(({ data, status }: HttpSuccess<S>) => ({ success: data, error: null, status }))
+      .catch(({ data, status }: HttpError) => ({ success: null, error: data || {}, status }))
+  );
 
 export const userAxios = axios.create({
-  baseURL: process.env.VUE_USER_API,
+  baseURL: process.env.USER_API,
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
@@ -40,7 +40,7 @@ export const userAxios = axios.create({
 });
 
 export const rssAxios = axios.create({
-  baseURL: process.env.VUE_RSS_API,
+  baseURL: process.env.VUE_APP_RSS_API,
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
@@ -50,11 +50,20 @@ export const rssAxios = axios.create({
 });
 
 export const postAxios = axios.create({
-  baseURL: process.env.VUE_POST_API,
+  baseURL: process.env.VUE_APP_POST_API,
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': 'Origin',
+    },
+  },
+});
+
+export const readmeAxios = axios.create({
+  baseURL: process.env.VUE_APP_GITHUB_RAW_PATH,
+  headers: {
+    common: {
+      'Access-Control-Allow-Origin': '*',
     },
   },
 });

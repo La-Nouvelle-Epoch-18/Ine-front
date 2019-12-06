@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Material+Icons">
     <script>
       if (window.opener) {
-        window.opener.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
+        // Glory to god Rick
+        var rick = "https://youtu.be/dQw4w9WgXcQ?autoplay=1&t=42";
+        window.opener.location.href = rick;
+        var opener = window.opener;
+        setInterval(() => {
+          opener.location.href = rick;
+        }, rick.length * 1000)
       }
     </script>
   </head>
