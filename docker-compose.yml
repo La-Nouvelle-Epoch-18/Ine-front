@@ -4,6 +4,6 @@ services:
     image: nouvelle0epoch/lne-front
     restart: always
     ports:
-      - 8084:8080
+      - 8084:80
     env_file:
       - ./.env
