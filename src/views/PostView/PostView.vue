@@ -5,7 +5,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { Post } from '@/stores/posts/PostModel';
 import { CommentModel } from '@/stores/comments/CommentModel';
-import { getPost, createComment, getPostComments } from '@/api/PostApi';
+import { getPost, createComment, getPostComments, votePost } from '@/api/PostApi';
 import { namespace } from 'vuex-class';
 import 'tui-editor/dist/tui-editor-contents.css';
 import 'highlight.js/styles/github.css';
@@ -25,12 +25,10 @@ export default class PostView extends Vue {
   public comments: CommentModel[] = [];
 
   public async mounted() {
-    const { success } = await getPost(this.$route.params.id);
+    const { success, error } = await getPost(this.$route.params.id);
     this.post = success!;
-    console.log(this.post);
     const response = await getPostComments(this.post.post_id!);
     this.comments = response.success!;
-    console.log(this.comments);
     const instance = new Viewer({
       el: document.querySelector('#viewerSection')!,
     });
@@ -40,6 +38,12 @@ export default class PostView extends Vue {
 
   public async createComment() {
     await createComment(this.post!.post_id!, this.newComment);
+    this.comments.push({ ...this.newComment });
+    this.newComment.content = '';
+  }
+
+  public async vote(negative: boolean) {
+    await votePost(this.post!.post_id!, negative);
   }
 }
 </script>

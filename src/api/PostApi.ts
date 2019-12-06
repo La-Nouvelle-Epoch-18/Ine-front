@@ -9,16 +9,16 @@ export const getAll = ():
 
 export const getPost = (id: string):
     Promise<PromiseInterface<Post>> => (
-        wrapper(postAxios.get(id))
+        wrapper(postAxios.get(`/${id}`))
     );
 
 export const getPermanentPosts = ():
-    Promise<PromiseInterface<null>> => (
+    Promise<PromiseInterface<Post[]>> => (
         wrapper(postAxios.get('/permanent'))
     );
 
 export const getTemporaryPosts = ():
-    Promise<PromiseInterface<null>> => (
+    Promise<PromiseInterface<Post[]>> => (
         wrapper(postAxios.get('/temporary'))
     );
 
@@ -27,12 +27,12 @@ export const createPost = (post: Post):
         wrapper(postAxios.post('', post))
     );
 
-export const votePost = (id: string, negative: boolean = false):
+export const votePost = (id: number, negative: boolean = false):
     Promise<PromiseInterface<null>> => (
         wrapper(postAxios.put(`/${id}/vote`, { negative }))
     );
 
-export const editPost = (id: string, post: Post):
+export const editPost = (id: number, post: Post):
     Promise<PromiseInterface<null>> => (
         wrapper(postAxios.put(`/${id}`, post))
     );
@@ -44,5 +44,5 @@ export const getPostComments = (id: number):
 
 export const createComment = (id: number, comment: CommentModel):
     Promise<PromiseInterface<null>> => (
-        wrapper(postAxios.post(`/${id}/comments`, comment))
+        wrapper(postAxios.post(`/${id}/comment`, comment))
     );
