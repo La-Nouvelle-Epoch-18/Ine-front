@@ -54,4 +54,4 @@ jobs:
         username: ${{ secrets.PROD_USERNAME }}
         key: ${{ secrets.PROD_KEY }}
         port: ${{ secrets.PROD_PORT }}
-        script: cd /home/ubuntu/front && sudo docker-compose restart
+        script: cd /home/ubuntu/front && sudo docker-compose down && sudo docker-compose up -d

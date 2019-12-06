@@ -30,7 +30,7 @@ export const wrapper = <S>(promise: Promise<any>):
   );
 
 export const userAxios = axios.create({
-  baseURL: process.env.USER_API,
+  baseURL: process.env.VUE_APP_USER_API,
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
