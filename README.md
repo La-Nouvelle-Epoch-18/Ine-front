@@ -16,21 +16,25 @@ Le projet fonctionne sur la base du partage de connaissances entre les différen
 
 # Architecture
 
-### Front VueJS
+### Front VueJS [projet](https://github.com/La-Nouvelle-Epoch-18/Ine-front)
 
 Le site web est réalisé en VueJS Typescript.
 
-### Microservice Authentification
+### Microservice Authentification [projet](https://github.com/La-Nouvelle-Epoch-18/lne-user)
 
 Le microservice d'authentification génére et valide les tokens JWT pour la connection et l'inscription des utilisateurs. 
 
-### Microservice Posts
+### Microservice Posts [projet](https://github.com/La-Nouvelle-Epoch-18/lne-posts)
 
 Le microservice des posts permet de créer, modifier ou visionner des posts.
 
-### Microservice Channel
+### Microservice Channel [projet](https://github.com/La-Nouvelle-Epoch-18/lne-channel)
 
 Le microservice de channel fédére les différents flux de communications des services universitaires pour une communication directe avec les utilisateurs du site.
+
+# Documentation
+
+Les documentations des différents projets sont disponibles [à cette adresse](https://github.com/La-Nouvelle-Epoch-18/lne-doc)
 
 # Crédits
 
