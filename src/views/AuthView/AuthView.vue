@@ -31,6 +31,9 @@ export default class AuthView extends Vue {
   @userModule.Action public loginUser!: (data: LoginRequest) =>
               Promise<PromiseInterface<LoginResponse>>;
 
+  @userModule.Action public registerUser!: (data: RegisterRequest) =>
+              Promise<PromiseInterface<LoginResponse>>;
+
   public async login() {
     const { success, error } = await this.loginUser(this.loginReq);
     if (error) {
@@ -44,7 +47,7 @@ export default class AuthView extends Vue {
   }
 
   public async register() {
-    const { success, error } = await this.loginUser(this.loginReq);
+    const { success, error } = await this.registerUser(this.registerReq);
     if (error) {
       this.snackbarRegisterKO = true;
       this.snackbarLoginKO = false;

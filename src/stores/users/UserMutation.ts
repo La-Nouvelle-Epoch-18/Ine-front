@@ -9,7 +9,7 @@ export const mutations: MutationTree<UserState> = {
     state.error = null;
   },
 
-  [types.LOGIN_REQUEST_SUCCESS](state, data: GenericError) {
+  [types.LOGIN_REQUEST_ERROR](state, data: GenericError) {
     state.user = null;
     state.error = data;
   },
@@ -19,7 +19,7 @@ export const mutations: MutationTree<UserState> = {
     state.error = null;
   },
 
-  [types.REGISTER_REQUEST_SUCCESS](state, data: GenericError) {
+  [types.REGISTER_REQUEST_ERROR](state, data: GenericError) {
     state.user = null;
     state.error = data;
   },
