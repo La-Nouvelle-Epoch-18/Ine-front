@@ -22,6 +22,12 @@
       >
         Offres
       </v-btn>
+      <v-btn
+        text
+        :to="{ name: 'profile/1'}"
+      >
+        Flux
+      </v-btn>
       <v-btn 
         text
         :to="{ name: 'auth'}"
@@ -30,15 +36,6 @@
         Connexion / Inscription
       </v-btn>
     </v-toolbar-items>
-
-    <v-tooltip bottom>
-      <template v-slot:activator="{ on }">
-        <v-btn icon v-on="on">
-          <v-icon>mdi-person</v-icon>
-        </v-btn>
-      </template>
-      <span>Mon compte</span>
-    </v-tooltip>
 
   </v-toolbar>
 </div>
