@@ -3,39 +3,35 @@
 <h1 align="center">Projet Nuit de l'INFO 2019</h1>
 
 <p align="center">
-<a href="">lien</a>
+Ce projet à été réaliser lors de la Nuit de l'Info 2019  
 </p>
 
+<p align="center">
+<a href="nouvelle-epoch.mff.dev">nouvelle-epoch.mff.dev</a>
+</p>
 
-## Project setup
-```
-npm install
-```
+# Principe du projet
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Le projet fonctionne sur la base du partage de connaissances entre les différents étudiants, chaque étudiant peut visionner des offres sur le site web et voter pour celles-ci. Certaines offres sont permanentes (APL, Bourses, ...) tandis que d'autres sont temporaires (collocation, appartement libre, ...). Les services universitaires peuvent proposer leurs propres offres tout comme un utilisateur normal, mais disposent en plus d'un profil qui leurs permettent de communiquer via un de leurs flux rss.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# Architecture
 
-### Run your tests
-```
-npm run test
-```
+### Front VueJS
 
-### Lints and fixes files
-```
-npm run lint
-```
+Le site web est réalisé en VueJS Typescript.
 
-### Run your unit tests
-```
-npm run test:unit
-```
+### Microservice Authentification
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Le microservice d'authentification génére et valide les tokens JWT pour la connection et l'inscription des utilisateurs. 
+
+### Microservice Posts
+
+Le microservice des posts permet de créer, modifier ou visionner des posts.
+
+### Microservice Channel
+
+Le microservice de channel fédére les différents flux de communications des services universitaires pour une communication directe avec les utilisateurs du site.
+
+# Crédits
+
+Amine Hilaly | Kévin Baumeyer | Robin Biechy | Yohann Jolain | Sébastien Erfani
