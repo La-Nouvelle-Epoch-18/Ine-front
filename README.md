@@ -10,6 +10,10 @@ Ce projet à été réaliser lors de la Nuit de l'Info 2019
 <a href="nouvelle-epoch.mff.dev">nouvelle-epoch.mff.dev</a>
 </p>
 
+<p align="center">
+Amine Hilaly | Kévin Baumeyer | Robin Biechy | Yohann Jolain | Sébastien Erfani
+</p>
+
 # Principe du projet
 
 Le projet fonctionne sur la base du partage de connaissances entre les différents étudiants, chaque étudiant peut visionner des offres sur le site web et voter pour celles-ci. Certaines offres sont permanentes (APL, Bourses, ...) tandis que d'autres sont temporaires (collocation, appartement libre, ...). Les services universitaires peuvent proposer leurs propres offres tout comme un utilisateur normal, mais disposent en plus d'un profil qui leurs permettent de communiquer via un de leurs flux rss.
@@ -46,12 +50,14 @@ Le microservice de channel fédére les différents flux de communications des s
 
 Image docker:  [https://hub.docker.com/u/nouvelle0epoch/lne-channel](https://hub.docker.com/u/nouvelle0epoch/lne-channel)
 
+# CI/CD
+
+Les images des projets sont automatiquements créer lors des modifications et publiés sur le hub docker. Les images sont ensuites pulls par le serveur OVH de production. Le service est ensuite redémarré avec `docker-compose restart`
+
 # Documentation
 
 Les documentations des différents projets sont disponibles [à cette adresse](https://github.com/La-Nouvelle-Epoch-18/lne-doc)
 
-# Crédits
-
-Amine Hilaly | Kévin Baumeyer | Robin Biechy | Yohann Jolain | Sébastien Erfani
+___
 
 <p align="center"><img width="100" src="https://pbs.twimg.com/profile_images/1051836795745382400/XjGKhSdO.jpg" alt="La Nuit de L'info"></p>
