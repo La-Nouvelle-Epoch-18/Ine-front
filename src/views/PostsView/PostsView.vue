@@ -6,6 +6,8 @@ import { Component, Vue } from 'vue-property-decorator';
 import PostsList from '@/components/PostsList/PostsList.vue';
 import { Post } from '../../stores/posts/PostModel';
 import { getAll } from '@/api/PostApi';
+import { namespace } from 'vuex-class';
+const UserModule = namespace('users');
 
 @Component({
   components: {
@@ -14,6 +16,7 @@ import { getAll } from '@/api/PostApi';
 })
 export default class PostsView extends Vue {
   public posts: Post[] = [];
+  @UserModule.Getter public isConnected!: boolean;
 
   public async mounted() {
     const { success } = await getAll();

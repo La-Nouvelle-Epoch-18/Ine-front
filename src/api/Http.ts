@@ -50,7 +50,7 @@ export const rssAxios = axios.create({
 });
 
 export const postAxios = axios.create({
-  baseURL: process.env.VUE_APP_POST_API,
+  baseURL: process.env.VUE_APP_POSTS_API,
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
@@ -64,6 +64,8 @@ export const readmeAxios = axios.create({
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'https://usr.lne.mff.dev',
+
     },
   },
 });

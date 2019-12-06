@@ -5,6 +5,8 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Editor from 'tui-editor';
 import PostEditor from '@/components/PostEditor/PostEditor.vue';
+import { createPost } from '../../api/PostApi';
+import { Post } from '@/stores/posts/PostModel';
 
 @Component({
   components: {
@@ -12,8 +14,12 @@ import PostEditor from '@/components/PostEditor/PostEditor.vue';
   },
 })
 export default class CreatePostView extends Vue {
-  public send(editorResult: string) {
-    
+  public post: Post = { title: '', content: '' };
+
+  public async send(editorResult: string) {
+    this.post.content = editorResult;
+    await createPost(this.post);
+    this.$router.push({name: '/Posts'});
   }
 }
 </script>

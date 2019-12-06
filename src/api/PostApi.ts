@@ -7,8 +7,8 @@ export const getAll = ():
     );
 
 export const getPost = (id: string):
-    Promise<PromiseInterface<null>> => (
-        wrapper(postAxios.post(id))
+    Promise<PromiseInterface<Post>> => (
+        wrapper(postAxios.get(id))
     );
 
 export const getPermanentPosts = ():

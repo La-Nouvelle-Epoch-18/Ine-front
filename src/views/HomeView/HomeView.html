@@ -1,7 +1,45 @@
 <div>
-  <v-container fluid grid-list-xl pt-3>
-    <v-layout row wrap>
-      <div id="viewerSection"></div>
-    </v-layout>
+  <v-container class="my-6">
+    <v-row
+      justify="center"
+    >
+      <v-col sm="12" md="9">
+        <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><p align="center"><a target="_blank" rel="noopener noreferrer" href="https://avatars0.githubusercontent.com/u/58552280?s=200&amp;v=4"><img width="100" src="https://avatars0.githubusercontent.com/u/58552280?s=200&amp;v=4" alt="La Nouvelle Epoch" style="max-width:100%;"></a></p>
+          <h1 align="center"><a id="user-content-projet-nuit-de-linfo-2019" class="anchor" aria-hidden="true" href="#projet-nuit-de-linfo-2019"></a>Projet Nuit de l'INFO 2019</h1>
+          <p align="center">
+          Ce projet à été réalisé lors de la Nuit de l'Info 2019  
+          </p>
+          <p align="center">
+          <a href="/La-Nouvelle-Epoch-18/Ine-front/blob/master/nouvelle-epoch.mff.dev">nouvelle-epoch.mff.dev</a>
+          </p>
+          <p align="center">
+          Amine Hilaly | Kévin Baumeyer | Robin Biechy | Yohann Jolain | Sébastien Erfani
+          </p>
+          <h1><a id="user-content-principe-du-projet" class="anchor" aria-hidden="true" href="#principe-du-projet"></a>Principe du projet</h1>
+          <p>Le projet fonctionne sur la base du partage de connaissances entre les différents étudiants, chaque étudiant peut visionner des offres sur le site web et voter pour celles-ci. Certaines offres sont permanentes (APL, Bourses, ...) tandis que d'autres sont temporaires (collocation, appartement libre, ...). Les services universitaires peuvent proposer leurs propres offres tout comme un utilisateur normal, mais disposent en plus d'un profil qui leurs permettent de communiquer via un de leurs flux rss.</p>
+          <h1><a id="user-content-architecture" class="anchor" aria-hidden="true" href="#architecture"></a>Architecture</h1>
+          <h3><a id="user-content-front-vuejs-projet" class="anchor" aria-hidden="true" href="#front-vuejs-projet"></a>Front VueJS [<a href="https://github.com/La-Nouvelle-Epoch-18/Ine-front">projet</a>]</h3>
+          <p>Le site web est réalisé en VueJS Typescript.</p>
+          <p>Image docker:  <a href="https://hub.docker.com/u/nouvelle0epoch/lne-front" rel="nofollow">https://hub.docker.com/u/nouvelle0epoch/lne-</a></p>
+          <h3><a id="user-content-microservice-authentification-projet" class="anchor" aria-hidden="true" href="#microservice-authentification-projet"></a>Microservice Authentification [<a href="https://github.com/La-Nouvelle-Epoch-18/lne-user">projet</a>]</h3>
+          <p>Technologies: GO + PostgreSQL</p>
+          <p>Le microservice d'authentification génére et valide les tokens JWT pour la connection et l'inscription des utilisateurs.</p>
+          <p>Image docker:  <a href="https://hub.docker.com/u/nouvelle0epoch/lne-user" rel="nofollow">https://hub.docker.com/u/nouvelle0epoch/lne-user</a></p>
+          <h3><a id="user-content-microservice-posts-projet" class="anchor" aria-hidden="true" href="#microservice-posts-projet"></a>Microservice Posts [<a href="https://github.com/La-Nouvelle-Epoch-18/lne-posts">projet</a>]</h3>
+          <p>Technologies: Typescript + Express + PostgreSQL</p>
+          <p>Le microservice des posts permet de créer, modifier ou visionner des posts.</p>
+          <p>Image docker:  <a href="https://hub.docker.com/u/nouvelle0epoch/lne-posts" rel="nofollow">https://hub.docker.com/u/nouvelle0epoch/lne-posts</a></p>
+          <h3><a id="user-content-microservice-channel-projet" class="anchor" aria-hidden="true" href="#microservice-channel-projet"></a>Microservice Channel [<a href="https://github.com/La-Nouvelle-Epoch-18/lne-channel">projet</a>]</h3>
+          <p>Technologies: Javascript + MongoDB</p>
+          <p>Le microservice de channel fédére les différents flux de communications des services universitaires pour une communication directe avec les utilisateurs du site.</p>
+          <p>Image docker:  <a href="https://hub.docker.com/u/nouvelle0epoch/lne-channel" rel="nofollow">https://hub.docker.com/u/nouvelle0epoch/lne-channel</a></p>
+          <h1><a id="user-content-cicd" class="anchor" aria-hidden="true" href="#cicd"></a>CI/CD</h1>
+          <p>Les images des projets sont automatiquements crées lors des modifications et publiés sur le hub docker. Les images sont ensuites pulls par le serveur OVH de production. Le service est ensuite redémarré avec <code>docker-compose restart</code></p>
+          <h1><a id="user-content-documentation" class="anchor" aria-hidden="true" href="#documentation"></a>Documentation</h1>
+          <p>Les documentations des différents projets sont disponibles <a href="https://github.com/La-Nouvelle-Epoch-18/lne-doc">à cette adresse</a></p>
+          <p align="center"><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/42c8c6038e430903ebb1447848a1c3a76765bd75/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f313035313833363739353734353338323430302f586a474b6853644f2e6a7067"><img width="100" src="https://camo.githubusercontent.com/42c8c6038e430903ebb1447848a1c3a76765bd75/68747470733a2f2f7062732e7477696d672e636f6d2f70726f66696c655f696d616765732f313035313833363739353734353338323430302f586a474b6853644f2e6a7067" alt="La Nuit de L'info" data-canonical-src="https://pbs.twimg.com/profile_images/1051836795745382400/XjGKhSdO.jpg" style="max-width:100%;"></a></p>
+        </article>
+      </v-col>
+    </v-row>
   </v-container>
 </div>

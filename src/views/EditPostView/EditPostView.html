@@ -8,7 +8,11 @@
       sm="12"
     >
       <h3 class="mb-3">Editer un post</h3>
-      <PostEditor :text="text"></PostEditor>
+      <v-text-field 
+        v-model="post.title"
+      >
+      </v-text-field>
+      <PostEditor :text="text" @editor-result="send"></PostEditor>
     </v-col>
   </v-row>
 </div>
