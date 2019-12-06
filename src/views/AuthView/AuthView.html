@@ -27,6 +27,7 @@
                   name="login"
                   prepend-icon="person"
                   type="text"
+                  v-model="loginReq.email"
                 />
                 <v-text-field
                   id="password"
@@ -34,18 +35,37 @@
                   name="password"
                   prepend-icon="lock"
                   type="password"
+                  v-model="loginReq.password"
                 />
               </v-card-text>
               <v-card-actions>
                 <v-spacer />
-                <v-btn color="primary">Connexion</v-btn>
+                <v-btn color="primary" @click="login">Connexion</v-btn>
               </v-card-actions>
+
+                <v-snackbar
+                  v-model="snackbarLoginKO"
+                  :auto-height="true"
+                  :timeout="0"
+                  color="error"
+                >
+                <div>
+                  Erreur en se connectant. Avez vous les bons logins?
+                </div>
+                <v-btn
+                  icon
+                  @click="snackbarLoginKO = false"
+                >
+                  <v-icon>close</v-icon>
+                </v-btn>
+              </v-snackbar>
             </v-tab-item>
 
             <v-tab-item>
               <v-card-text>
                 <v-text-field
                   label="Adresse mail"
+                  v-model="registerReq.email"
                   name="login"
                   prepend-icon="person"
                   type="text"
@@ -53,6 +73,7 @@
 
                 <v-text-field
                   label="Pseudo"
+                  v-model="registerReq.username"
                   name="login"
                   prepend-icon="account-badge"
                   type="text"
@@ -60,6 +81,7 @@
 
                 <v-text-field
                   id="password"
+                  v-model="registerReq.password"
                   label="Mot de passe"
                   name="password"
                   prepend-icon="lock"
@@ -71,12 +93,12 @@
                   label="Je représente un service universitaire"
                   name="university"
                   color="primary"
-                  v-model="university"
+                  v-model="registerReq.isSchool"
                 >
                 </v-checkbox>
 
                 <v-text-field
-                  v-if="university"
+                  v-if="registerReq.isSchool"
                   id="rss"
                   label="Flux RSS de communication"
                   name="rss"
@@ -86,8 +108,25 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer />
-                <v-btn color="primary">Inscription</v-btn>
+                <v-btn color="primary" @click="register">Inscription</v-btn>
               </v-card-actions>
+
+              <v-snackbar
+                  v-model="snackbarRegisterKO"
+                  :auto-height="true"
+                  :timeout="0"
+                  color="error"
+                >
+                <div>
+                  Erreur en s'enregistrant, l'email peut déja être pris.
+                </div>
+                <v-btn
+                  icon
+                  @click="snackbarRegisterKO = false"
+                >
+                  <v-icon>close</v-icon>
+                </v-btn>
+              </v-snackbar>
             </v-tab-item>
           </v-tabs>
         </v-card>
