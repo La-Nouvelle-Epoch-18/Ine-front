@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install Dependencies
-      run: npm install 
-    - name: Build service
-      run: npm run build
     - name: Build the Docker image
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
