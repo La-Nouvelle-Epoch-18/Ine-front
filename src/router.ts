@@ -59,7 +59,7 @@ export default new Router({
           component: PostView,
         },
         {
-          path: 'profile/:id',
+          path: 'profile',
           name: 'profile',
           component: ProfileView,
         },
