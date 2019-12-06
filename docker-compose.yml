@@ -5,3 +5,5 @@ services:
     restart: always
     ports:
       - 8084:8080
+    env_file:
+      - ./.env

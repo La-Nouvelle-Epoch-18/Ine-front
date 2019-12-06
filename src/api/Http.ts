@@ -60,7 +60,7 @@ export const postAxios = axios.create({
 });
 
 export const readmeAxios = axios.create({
-  baseURL: process.env.VUE_APP_GITHUB_RAW_PATH,
+  baseURL: process.env.VUE_APP_README_PATH,
   headers: {
     common: {
       'Access-Control-Allow-Origin': '*',
