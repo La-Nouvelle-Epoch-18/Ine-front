@@ -24,5 +24,9 @@ export default class PostView extends Vue {
     content: 'NaNaNANANANANANANANANANANANANANANNANAN COMMMENT',
     post: 1,
   }];
+
+  public async vote() {
+    
+  }
 }
 </script>

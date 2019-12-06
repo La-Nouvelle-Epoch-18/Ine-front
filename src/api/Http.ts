@@ -81,7 +81,7 @@ rssAxios.interceptors.response.use((response) => {
 rssAxios.interceptors.request.use((request) => {
   const token = localStorage.getItem('token');
   if (token) {
-    request.headers.authorization = `Bearer ${token}`;
+    request.headers.authorization = `bearer ${token}`;
   }
   return request;
 }, (error) => {
@@ -101,7 +101,7 @@ postAxios.interceptors.response.use((response) => {
 postAxios.interceptors.request.use((request) => {
   const token = localStorage.getItem('token');
   if (token) {
-    request.headers.authorization = `Bearer ${token}`;
+    request.headers.authorization = `bearer ${token}`;
   }
   return request;
 }, (error) => {
@@ -121,7 +121,7 @@ userAxios.interceptors.response.use((response) => {
 userAxios.interceptors.request.use((request) => {
   const token = localStorage.getItem('token');
   if (token) {
-    request.headers.authorization = `Bearer ${token}`;
+    request.headers.authorization = `bearer ${token}`;
   }
   return request;
 }, (error) => {

@@ -1,3 +1,4 @@
+import '@mdi/font/css/materialdesignicons.css';
 import Vue from 'vue';
 import Vuetify, {
   VApp,
@@ -78,5 +79,8 @@ export default new Vuetify({
     VImg,
     VToolbarItems,
     VRow,
+  },
+  icons: {
+    iconfont: 'mdi', // default - only for display purposes
   },
 });

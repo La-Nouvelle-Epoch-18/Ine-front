@@ -26,6 +26,7 @@
     "vuex-class": "^0.3.2"
   },
   "devDependencies": {
+    "@mdi/font": "^4.6.95",
     "@types/jest": "^23.1.4",
     "@types/node": "^12.12.14",
     "@vue/cli-plugin-babel": "^3.12.1",

@@ -26,7 +26,6 @@ const EditPostView = () => import(/* webpackChunkName: "editPostView" */
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
   scrollBehavior(to: any, from: any, savedPosition: any) {
     if (savedPosition) {
       return savedPosition;
