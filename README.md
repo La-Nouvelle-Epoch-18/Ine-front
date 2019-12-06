@@ -20,11 +20,15 @@ Le projet fonctionne sur la base du partage de connaissances entre les différen
 
 Le site web est réalisé en VueJS Typescript.
 
+Image docker:  [https://hub.docker.com/u/nouvelle0epoch/lne-](https://hub.docker.com/u/nouvelle0epoch/lne-front)
+
 ### Microservice Authentification [[projet](https://github.com/La-Nouvelle-Epoch-18/lne-user)]
 
 Technologies: GO + PostgreSQL
 
-Le microservice d'authentification génére et valide les tokens JWT pour la connection et l'inscription des utilisateurs. 
+Le microservice d'authentification génére et valide les tokens JWT pour la connection et l'inscription des utilisateurs.
+
+Image docker:  [https://hub.docker.com/u/nouvelle0epoch/lne-user](https://hub.docker.com/u/nouvelle0epoch/lne-user)
 
 ### Microservice Posts [[projet](https://github.com/La-Nouvelle-Epoch-18/lne-posts)]
 
@@ -32,11 +36,15 @@ Technologies: Typescript + Express + PostgreSQL
 
 Le microservice des posts permet de créer, modifier ou visionner des posts.
 
+Image docker:  [https://hub.docker.com/u/nouvelle0epoch/lne-posts](https://hub.docker.com/u/nouvelle0epoch/lne-posts)
+
 ### Microservice Channel [[projet](https://github.com/La-Nouvelle-Epoch-18/lne-channel)]
 
 Technologies: Javascript + MongoDB
 
 Le microservice de channel fédére les différents flux de communications des services universitaires pour une communication directe avec les utilisateurs du site.
+
+Image docker:  [https://hub.docker.com/u/nouvelle0epoch/lne-channel](https://hub.docker.com/u/nouvelle0epoch/lne-channel)
 
 # Documentation
 
