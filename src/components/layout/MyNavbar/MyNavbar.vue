@@ -8,5 +8,6 @@ const userModule = namespace('users');
 
 @Component
 export default class MyNavbar extends Vue {
+    @userModule.Getter public isConnected!: boolean;
 }
 </script>

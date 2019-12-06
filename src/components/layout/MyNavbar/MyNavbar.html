@@ -4,7 +4,7 @@
     color="black lighten-2"
   >
       <v-toolbar-title>
-        Title
+        Study tips
       </v-toolbar-title>
 
     <v-spacer></v-spacer>
@@ -21,6 +21,13 @@
         :to="{ name: 'posts'}"
       >
         Offres
+      </v-btn>
+      <v-btn 
+        text
+        :to="{ name: 'auth'}"
+        v-if="!isConnected"
+      >
+        Connexion / Inscription
       </v-btn>
     </v-toolbar-items>
 

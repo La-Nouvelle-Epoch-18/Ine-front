@@ -1,5 +1,6 @@
 import { PromiseInterface, wrapper, postAxios } from './Http';
 import { Post } from '@/stores/posts/PostModel';
+import { CommentModel } from '@/stores/comments/CommentModel';
 
 export const getAll = ():
     Promise<PromiseInterface<Post[]>> => (
@@ -34,4 +35,14 @@ export const votePost = (id: string, negative: boolean = false):
 export const editPost = (id: string, post: Post):
     Promise<PromiseInterface<null>> => (
         wrapper(postAxios.put(`/${id}`, post))
+    );
+
+export const getPostComments = (id: number):
+    Promise<PromiseInterface<CommentModel[]>> => (
+        wrapper(postAxios.get(`/${id}/comments`))
+    );
+
+export const createComment = (id: number, comment: CommentModel):
+    Promise<PromiseInterface<null>> => (
+        wrapper(postAxios.post(`/${id}/comments`, comment))
     );

@@ -1,4 +1,4 @@
-<div>
+<div v-if="post">
   <v-container fluid class="px-2 ma-4">
     <v-row>
       <v-col cols="12">
@@ -16,6 +16,9 @@
           </v-card-actions>
         </v-card>
         
+        <v-textarea outlined :value="newComment.content"></v-textarea>
+        <v-btn color="primary" @click="createComment">Commenter</v-btn>
+
         <v-list>
           <v-list-item v-for="comment in comments">
             <v-list-item-content>
