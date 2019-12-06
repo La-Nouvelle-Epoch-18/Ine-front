@@ -52,7 +52,7 @@ Image docker:  [https://hub.docker.com/u/nouvelle0epoch/lne-channel](https://hub
 
 # CI/CD
 
-Les images des projets sont automatiquements créer lors des modifications et publiés sur le hub docker. Les images sont ensuites pulls par le serveur OVH de production. Le service est ensuite redémarré avec `docker-compose restart`
+Les images des projets sont automatiquements crées lors des modifications et publiés sur le hub docker. Les images sont ensuites pulls par le serveur OVH de production. Le service est ensuite redémarré avec `docker-compose restart`
 
 # Documentation
 
