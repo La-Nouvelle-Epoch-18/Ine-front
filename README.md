@@ -1,5 +1,5 @@
 <p align="center"><img width="100" src="https://avatars0.githubusercontent.com/u/58552280?s=200&v=4" alt="La Nouvelle Epoch"></p>
-
+https://pbs.twimg.com/profile_images/1051836795745382400/XjGKhSdO.jpg
 <h1 align="center">Projet Nuit de l'INFO 2019</h1>
 
 <p align="center">
@@ -53,3 +53,5 @@ Les documentations des différents projets sont disponibles [à cette adresse](h
 # Crédits
 
 Amine Hilaly | Kévin Baumeyer | Robin Biechy | Yohann Jolain | Sébastien Erfani
+
+<p align="center"><img width="100" src="https://pbs.twimg.com/profile_images/1051836795745382400/XjGKhSdO.jpg" alt="La Nuit de L'info"></p>
