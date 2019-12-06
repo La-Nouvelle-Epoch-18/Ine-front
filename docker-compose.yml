@@ -1,0 +1,7 @@
+version: '3'
+services:
+  lne-posts:
+    image: nouvelle0epoch/lne-front
+    restart: always
+    ports:
+      - 8084:8080
