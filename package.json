@@ -5,9 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "test:publish": "vue-cli-service test:unit --ci --reporters=jest-junit --reporters=default --coverage --coverageReporters=lcov --coverageReporters=cobertura",
-    "test:unit": "vue-cli-service test:unit"
+    "test:publish": "vue-cli-service test:unit --ci --reporters=jest-junit --reporters=default --coverage --coverageReporters=lcov --coverageReporters=cobertura"
   },
   "dependencies": {
     "axios": "^0.19.0",
